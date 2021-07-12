@@ -6,7 +6,7 @@
 #    By: fhamel <fhamel@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/21 19:44:59 by fhamel            #+#    #+#              #
-#    Updated: 2021/07/06 14:12:45 by fhamel           ###   ########.fr        #
+#    Updated: 2021/07/12 12:05:22 by fhamel           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,10 +51,10 @@ AR			=	ar -rcs
 all : $(D_OBJS) $(LIBFT)
 
 $(D_OBJS) :
-	mkdir -p $@
+	@mkdir -p $@
 
 $(D_OBJS)%.o : $(D_SRCS)%.c
-	$(CC) $(FLAGS) -c $< -o $@ -Iincludes
+	@$(CC) $(FLAGS) -c $< -o $@ -Iincludes
 
 $(LIBFT) : $(OBJS)
 	$(AR) $(LIBFT) $(OBJS)

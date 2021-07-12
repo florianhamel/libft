@@ -6,7 +6,7 @@
 /*   By: fhamel <fhamel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:52:53 by fhamel            #+#    #+#             */
-/*   Updated: 2021/07/06 14:26:49 by fhamel           ###   ########.fr       */
+/*   Updated: 2021/07/10 19:08:28 by fhamel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ char	**arr_alloc(const char *s, char c)
 		while (s[index] == c)
 			index++;
 		arr[i] = (char *)ft_calloc(len_word(&s[index], c) + 1, sizeof(char));
+		if (!arr[i])
 		{
 			free_arr(arr, i);
 			return (NULL);
